@@ -1,0 +1,99 @@
+  /* This is to style the page heading. */
+  #companyname {
+    margin: 0;
+    float: left;
+    padding: 5px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+/* This is to remove the underline from the page heading because it's a link. */
+#companyname a {
+    color: white;
+    text-decoration: none;
+}
+
+/* NAVIGATION CSS BEGIN */
+
+/* This is to style the element that holds all the menu items. */
+nav {
+    float: right;
+}
+
+/* This will only affect the <ul> element within the nav element. */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+/* This will only affect the <li> item in the <ul> element under the nav element. */
+nav ul li {
+    color: #fff;
+    display: block;
+    float: left;
+    padding: 1rem;
+    border-right: 1px solid #bbb;
+    /* rem - Relative to font-size of the root element */
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+/* This will only affect the <a> tags within <li> items in the <ul> element under the nav element. */
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+/* Hover properties of list items */
+nav ul li:hover,
+nav ul li:focus-within {
+    background-color: royalblue;
+    cursor: pointer;
+}
+
+/* Link properties of a menu item in focus */
+nav ul li:focus-within a {
+    outline: none;
+}
+
+/*This affects sub menu under a main menu item */
+nav ul li ul {
+    background-color: cornflowerblue;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    white-space: nowrap;
+}
+
+/* Hover properties of list items in sub menus */
+nav ul li:hover>ul,
+nav ul li:focus-within>ul,
+nav ul li ul:hover,
+nav ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+/*This affects list items of a sub menu under a main menu item */
+nav ul li ul li {
+    background-color: cornflowerblue;
+    width: 100%;
+    display: inline-block;
+}
+
+/* This will only affect the LAST <li> item in the <ul> element under the nav element. */
+nav li:last-child {
+    border-right: none;
+}
+
+/* Changes the colour of the active menu element. Thsi has to be set dynamically and cannot be done with CSS alone. */
+nav .active {
+    background-color: black;
+}
